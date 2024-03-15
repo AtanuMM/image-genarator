@@ -89,7 +89,7 @@ export default function ImageUpload() {
             const headers = {
                 'Content-Type': 'multipart/form-data',
                 // "x-api-key": import.meta.env.VITE_PHOTOROOM_API_KEY
-                "x-api-key": "91f921fec05a8d2c43fea05181a7bde9e0210d4a"
+                "x-api-key": "ab2e9830ba4f34df376d8f77ef31fd51b365c3dc"
             }
             const res = await axios.post(apiUrl, formData, {
                 headers,
