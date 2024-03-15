@@ -59,6 +59,7 @@ export default function ImageUpload() {
     const handleFileTypeError = (err) => {
         if (err) {
             setFileTypeError(true);
+            setUploadedFile(null);
             setFile(null);
             setSelectedOption(null);
             setLoader(false);
@@ -69,6 +70,7 @@ export default function ImageUpload() {
     // Handle Reset Upload 
     const resetUploader = () => {
         setFile(null);
+        setUploadedFile(null);
         setSelectedOption(null);
         setLoader(false);
         setGeneratedImageUrl(false);
@@ -87,7 +89,7 @@ export default function ImageUpload() {
             const headers = {
                 'Content-Type': 'multipart/form-data',
                 // "x-api-key": import.meta.env.VITE_PHOTOROOM_API_KEY
-                "x-api-key": "7f98c673ef2359b15b081cd80a156fcfb81e66e9"
+                "x-api-key": "91f921fec05a8d2c43fea05181a7bde9e0210d4a"
             }
             const res = await axios.post(apiUrl, formData, {
                 headers,
